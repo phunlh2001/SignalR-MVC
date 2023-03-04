@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Test_SignalR.Hubs;
 using Test_SignalR.Models;
 
 namespace Test_SignalR
@@ -21,6 +22,8 @@ namespace Test_SignalR
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddSignalR();
 
             services.AddDbContext<ApplicationDbContext>(options =>
             {
@@ -53,6 +56,7 @@ namespace Test_SignalR
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapHub<SignalrServer>("/signalrServer");
             });
         }
     }
