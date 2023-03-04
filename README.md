@@ -1,1 +1,1 @@
-## ASP.NET Core 5.0 using SignalR for Realtime
+## ASP.NET Core MVC 5.0 using SignalR for Realtime
