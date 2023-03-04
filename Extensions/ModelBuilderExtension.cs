@@ -10,7 +10,7 @@ namespace Test_SignalR.Extensions
             modelBuilder.Entity<Product>().HasData(
                 new Product
                 {
-                    ProdID = 1,
+                    ID = 1,
                     ProdName = "Name1",
                     Category = "Caterory",
                     StockQty = 100,
@@ -18,7 +18,7 @@ namespace Test_SignalR.Extensions
                 },
                 new Product
                 {
-                    ProdID = 2,
+                    ID = 2,
                     ProdName = "Name2",
                     Category = "Caterory",
                     StockQty = 100,
@@ -26,7 +26,7 @@ namespace Test_SignalR.Extensions
                 },
                 new Product
                 {
-                    ProdID = 3,
+                    ID = 3,
                     ProdName = "Name3",
                     Category = "Caterory",
                     StockQty = 100,
